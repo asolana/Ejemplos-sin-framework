@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header, section, footer{
+    padding: 2vw;
+}
+
+body{
+    color: #333;
+    font-family: Courier New, Courier, monospace;
+}
+
+header{
+    background-color: #ff0;
+}
+
+section{
+    background-color: #00f;
+}
+
+footer{
+    background-color: #999;
+}
