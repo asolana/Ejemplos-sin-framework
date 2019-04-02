@@ -9,9 +9,9 @@ sec.onclick = ()=>{
 
 //Funcion asignada a una variable/constante
 
-const dihola = function (x) {
+const dihola = (function (x) {
     alert('Hola ' + x);
-}
+});
 
 
 //Funcion anonima auto invocada
