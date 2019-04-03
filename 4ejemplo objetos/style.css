@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    background-color: #adadad;
+}
+li li:nth-of-type(1){
+    background-color: #d7d77d;
+}
