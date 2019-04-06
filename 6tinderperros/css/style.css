@@ -2,10 +2,20 @@
     margin:0;
     padding:0;
 }
+/* Quitar Scrollbar */
+body::-webkit-scrollbar{
+    width: 0 !important;
+}
+body{
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
 body{
     background: #ffcccd;
     width: 80%;
     margin:auto;
+    
 }
 header{
     text-align: center;
