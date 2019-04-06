@@ -14,3 +14,7 @@ li{
 li li:nth-of-type(1){
     background-color: #d7d77d;
 }
+
+header{
+    min-height: 150px;
+}

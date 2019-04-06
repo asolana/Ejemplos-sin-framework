@@ -12,22 +12,20 @@ const generadorNombreMascota = function (name, count) {
 };
 const generadorLista = function (list, anchor) {
     let liString = '';
-
-
-
+    
     for (let i = 0; i < list.length; i++) {
         liString += `
     <li>ID: ${list[i].id}<ul>
         <li>Nombre: ${list[i].nombre}</li>
         <li>Edad: ${list[i].edad}</li>
         <li>Precio: ${list[i].precio}</li>
-        <li><button class="btnComprar" data-id="${list[i].id}">Comprar</button></li>
+        <li><button data-id="${list[i].id}">Comprar</button></li>
     </ul></li>`;
     }
 
 
     anchor.innerHTML = liString;
-    document.querySelectorAll(".btnComprar").forEach(function(ele){
+    document.querySelectorAll("li li button").forEach(function(ele){
         let id = ele.dataset.id;
         ele.addEventListener('click',function(){alert(`Añadido ${id}`);});
     });
@@ -35,3 +33,5 @@ const generadorLista = function (list, anchor) {
 
 var listaMascotas = generadorNombreMascota("mascota", 1000);
 generadorLista(listaMascotas, listMascotas);
+
+
