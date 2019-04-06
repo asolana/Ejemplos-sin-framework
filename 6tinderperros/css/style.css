@@ -4,17 +4,130 @@
 }
 body{
     background: #ffcccd;
+    width: 80%;
+    margin:auto;
 }
 header{
     text-align: center;
     padding: 2%;
 }
 
+main{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+}
 
+figure{
+    width: 100%;
+    margin: auto;
+}
+img{
+    width: 50%;
+}
 
 footer{
-    width: 90%;
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    background-color: #f8233f;
+    color: #ffcccd;
+    border: 2px solid #ee0000;
+    border-bottom: 0px;
+    padding: 5px 15px;
+}
+
+#sect_Btn{
+    display:flex;
+    justify-content: space-between;
+    padding: 5%;
+    align-content: center;
+}
+
+/* Botones de antes y despues */
+#sect_Btn span{
+    display: inline-block;
+    position: relative;
+    padding: 0 25px 8px;
+    background-color: #f8233f;
+    border-radius: 50%;
+    font-size: 55px;
+    color: #fff;
+    transition: all .7s;
+}
+
+#sect_Btn span::before{
+    content: '';
     position: absolute;
-    bottom: 1%;
-    text-align: right;
+    padding: 30px;
+    left: 0;
+    border: 5px outset #f8233f;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+#sect_Btn span:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 1px #ee0000;
+}
+
+
+/* Boton de Like */
+#sect_Btn #like{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+    background-color: #f8233f;
+    border-radius: 0;
+    transform: rotate(-45deg); 
+}
+
+#sect_Btn #like::before{
+    content: '';
+    background-color: #f8233f;
+    position: absolute;
+    top:-20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#sect_Btn #like::after{
+    content: '';
+    background-color: #f8233f;
+    position: absolute;
+    top:0;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#sect_Btn #like:hover{
+    cursor: pointer;
+    animation: 1s infinite beat;
+}
+
+@keyframes beat {
+    0% {transform: rotate(-45deg) scale(1);}
+    25% {transform: rotate(-45deg) scale(1.1);}
+    40% {transform: rotate(-45deg) scale(1);}
+    60% {transform: rotate(-45deg) scale(1.1);}
+    100% {transform: rotate(-45deg) scale(1);  }
+  }
+
+/* Registro de matches */
+#ul_Like{
+    background-color: #ffcccd;
+    border: 1px solid #f8233f;
+    list-style: none;
+    color: #f8233f;
+}
+
+#ul_Like li:nth-child(odd){
+    background-color: #f8233f;
+    color: #ffcccd;
 }
