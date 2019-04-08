@@ -1,7 +1,7 @@
-var listMascota = [];
-var listLike = [];
+
 (function(){
-    
+    var listMascota = [];
+    var listLike = [];
     //Recuperacion de datos
     fetch('http://www.mocky.io/v2/5ca88eb3520000352997b7c8').then(function(response){
         console.log('Respuesta: ',response);
@@ -70,10 +70,7 @@ var listLike = [];
         let ya_liked = listLike.includes(mascota.id);
         if(!ya_liked){
             listLike.push(mascota.id);
-            let strLike = `
-                <li>
-                    ${mascota.nombre}
-                </li>`;
+            let strLike = `<li>${mascota.nombre}</li>`;
             ul_Like.innerHTML += strLike;
         }
     }
